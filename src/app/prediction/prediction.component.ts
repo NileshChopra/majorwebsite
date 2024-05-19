@@ -43,7 +43,7 @@ export class PredictionComponent implements AfterViewInit {
     });
     this.response = 'Waiting...';
     this.httpClient
-      .post<any>('http://127.0.0.1:8080/predict', formDataToSend)
+      .post<any>('https://99ca0a1e-84ee-45f7-9ba4-51c1979aca54-00-3flf7c3vpg1hr.sisko.replit.dev:8080/predict', formDataToSend)
       .subscribe((response) => {
         this.response = response;
       });
