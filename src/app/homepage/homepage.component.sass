@@ -1,0 +1,222 @@
+
+// ========== header ==========
+.header
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 50px
+    color: white
+
+.header-btn:hover
+    text-decoration: underline
+    cursor: pointer
+
+// ========== global ==========
+section
+    padding: 50px 0
+
+// ====== utility ======
+.purple
+    color: #5900CB
+.text-magnify
+    font-size: 56px
+.underline
+    text-decoration: underline
+// ========= section 1 =========
+.section1
+    background-image: url('../../assets/Slice 1.png')
+    background-repeat: no-repeat
+    background-size: cover
+
+.section1-body
+    color: white
+    display: flex
+    width: 100%
+    height: calc(100vh - 60px)
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+.section1-heading
+    text-align: center
+    width: 70%
+    font-size: 3.5em
+    font-weight: 600
+
+.section1-subheading
+    width: 60%
+    text-align: center
+
+// ========= section 2 =========
+
+.section2
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+
+.section2-left
+    transform: rotate(-90deg)
+    font-size: 46px
+    width: 600px
+    margin-right: -200px
+    margin-left: -200px
+
+.section2-right-inner
+    background-color: #E4E4E4
+    border-radius: 50px
+    padding-bottom: 50px
+
+.section2-right
+    width: min(80%, 1600px)
+    margin-right: 50px
+
+.section2-images-heading
+    text-align: center
+    padding: 50px 0
+    font-size: 46px
+    font-weight: 600
+
+.section2-images-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    gap: 50px
+
+.section2-image
+    width: 700px
+    position: relative
+    img
+        width: inherit
+        border-radius: 50px
+
+.section2-img-text
+    position: absolute
+    bottom: 0px
+    color: white
+    text-align: center
+    font-size: 16px
+    width: 100%
+    margin-bottom: 20px
+
+//============ section 3 ============
+.section3
+    height: auto
+.section3-left, .section3-right
+    width: 50%
+    display: flex
+    align-items: center
+    img
+        width: 100%
+        height: 100%
+
+.section3-left
+    img
+        border-bottom-right-radius: 50px
+        border-top-right-radius: 50px
+
+.section3-right
+    img
+        border-top-left-radius: 50px
+        border-bottom-left-radius: 50px
+
+.section3-row1, .section3-row2
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.section3-left-text, .section3-right-text
+    text-align: justify
+    font-size: 42px
+    width: 30%
+    margin: 0 auto
+
+//============ section 4 ============
+.section4
+    display: flex
+    .section4-right
+        width: max(40%, 800px)
+        margin: auto auto
+
+        .section4-heading
+            font-size: 42px
+            font-weight: 600
+
+        .section4-content
+
+            .container
+                padding-top: 50px
+                display: flex
+                gap: 50px
+                align-items: center
+
+                .icon
+                    width: 200px
+
+                img
+                    width: inherit
+                    height: auto
+
+                .content
+                    font-size: 26px
+                    text-align: justify
+    .section4-left
+        height: inherit
+        img
+            height: inherit
+            width: auto
+            border-bottom-right-radius: 50px
+            border-top-right-radius: 50px
+
+//============ section 5 ============
+
+.section5
+    height: auto
+    .section5-heading
+        font-weight: 600
+        padding-top: 50px
+        font-size: 42px
+        text-align: center
+.section5-content
+    .container
+        border: 1px grey solid
+        border-radius: 50px
+        width: min(1400px, 80%)
+        margin: 50px auto
+        display: flex
+        justify-content: space-around
+        align-items: center
+        gap: 50px
+        padding: 20px
+        img
+            height: 400px
+            width: auto
+
+    .flex-direction-reverse
+        flex-direction: row-reverse
+
+    .content
+        text-align: justify
+
+//============ section 6 ============
+
+.section6
+    height: auto
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 50px
+    div
+        width: min(1400px, 80%)
+        display: flex
+        align-items: center
+        justify-content: space-between
+    button
+        padding: 10px 30px
+        color: white
+        font-size: 40px
+        background-color: #5900CB
+        border: 0px
+        border-radius: 50px
+        cursor: pointer

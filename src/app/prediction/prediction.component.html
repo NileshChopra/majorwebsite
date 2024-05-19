@@ -1,0 +1,119 @@
+<section class="section1">
+  <div class="header">
+    <div class="disease-info header-btn" routerLink="/disease-info">
+      Disease Information
+    </div>
+    <div class="home header-btn" routerLink="/home">Home</div>
+    <div class="detection-ui header-btn underline" routerLink="/prediction">
+      Detection UI
+    </div>
+  </div>
+  <div class="section1-body">
+    <div class="section1-heading">HOW TO USE?</div>
+    <div class="section1-subheading">
+      <ol>
+        <li>Enter Name, Age and Medical History in form.</li>
+        <li>Upload Data file.</li>
+        <li>View final results.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="section2">
+  <div class="heading">Enter Details...</div>
+  <div class="subcontainer">
+    <form ngNativeValidate (ngSubmit)="onsubmit($event)">
+      <div class="group1">
+        <div class="name">Name</div>
+        <input
+          type="text"
+          id="age"
+          name="name"
+          placeholder="xyz..."
+          required
+          [(ngModel)]="formData.name"
+        />
+      </div>
+      <div class="group2">
+        <div class="age">Age</div>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          min="1"
+          max="150"
+          [(ngModel)]="formData.age"
+          required
+        />
+      </div>
+      <div class="group3">
+        <div class="gender">Gender</div>
+        <div class="container">
+          <div class="button">
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              [(ngModel)]="formData.gender"
+            />
+            <label class="purple" for="male">Male</label>
+          </div>
+          <div class="button">
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              [(ngModel)]="formData.gender"
+            />
+            <label class="purple" for="female">Female</label>
+          </div>
+          <div class="button">
+            <input
+              type="radio"
+              id="other"
+              name="gender"
+              value="other"
+              [(ngModel)]="formData.gender"
+            />
+            <label class="purple" for="other">Other</label>
+          </div>
+        </div>
+      </div>
+      <div class="group4">
+        <div class="medical-history">Medical History</div>
+        <textarea
+          name="medical-history"
+          id="medical-history"
+          placeholder="Enter past medical records..."
+          [(ngModel)]="formData.history"
+          required
+        ></textarea>
+      </div>
+      <div class="group5">
+        <div class="file">Data file</div>
+        <label for="file-picker-1" class="file-picker">Pick A File</label>
+        <input
+          type="file"
+          id="file-picker-1"
+          accept=".mat"
+          name="file-picker-1"
+          (change)="onFileSelected($event)"
+          required
+        />
+      </div>
+      <button type="submit" value="Submit">Submit</button>
+    </form>
+    <div class="group6">
+      <div class="prediction">Prediction</div>
+      <input
+        class="prediction-result"
+        type="text"
+        [value]="response"
+        disabled
+      />
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

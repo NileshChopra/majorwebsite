@@ -1,0 +1,171 @@
+// ========== header ==========
+.header
+    width: 100%
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 50px
+    color: white
+
+.header-btn:hover
+    text-decoration: underline
+    cursor: pointer
+
+// ========== global ==========
+section
+    padding: 50px 0
+
+// ====== utility ======
+.purple
+    color: #5900CB
+.text-magnify
+    font-size: 56px
+.underline
+    text-decoration: underline
+// ========= section 1 =========
+.section1
+    background-image: url('../../assets/Slice 3.png')
+    background-repeat: no-repeat
+    background-size: cover
+
+.section1-body
+    color: white
+    display: flex
+    width: 100%
+    height: calc(100vh - 60px)
+    align-items: flex-end
+    justify-content: center
+    flex-direction: column
+
+.section1-heading
+    text-align: center
+    margin-right: 200px
+    font-size: 3.5em
+    font-weight: 600
+
+.section1-subheading
+    margin-right: 330px
+    text-align: justify
+    width: 400px
+    ol
+        width: 400px
+    li
+        font-size: 36px
+
+// ========= section 2 =========
+
+.section2
+    height: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    .heading
+        color: #5900CB
+        font-size: 60px
+        margin-bottom: 20px
+
+    .name, .age, .medical-history, .file, .prediction, .gender
+        color: #5900CB
+        background-color: #F1F1F1
+        padding: 10px
+        width: 280px
+        border-radius: 50px
+        font-size: 36px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: 40px
+        border: 1px solid grey
+        align-self: start
+
+    #age, #name
+        width: 450px
+        padding: 10px 20px
+        font-size: 36px
+        border: 1px solid grey
+        border-radius: 50px
+
+    .group1, .group2, .group3, .group4, .group5, .group6
+        display: flex
+        margin: 20px 0
+        flex-basis: none
+
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 0px 10px
+        grid-template-areas: "male female other"
+        width: 490px
+        label
+            border: 1px solid grey
+            border-radius: 50px
+            font-size: 36px
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 10px 0
+        input[type="radio"]
+            display: none
+        input[type="radio"]:checked
+            & + label
+                background: #5900CB
+                color: white
+    .male
+        grid-area: male
+    .female
+        grid-area: female
+    .other
+        grid-area: other
+
+    textarea
+        width: 450px
+        padding: 20px
+        height: 300px
+        text-align: left
+        border-radius: 50px
+        resize: none
+        font-size: 28px
+
+    button[type="submit"]
+        width: 100%
+        padding: 10px 0
+        background: #5900CB
+        color: white
+        border-radius: 50px
+        border: none
+        cursor: pointer
+        font-size: 36px
+
+    input[type="submit"]:hover
+        transition: all 0.3s ease-in-out
+        box-shadow: 3px 5px 6px rgba(0,0,0,0.3)
+
+    .prediction-result
+        width: 490px
+        padding: 10px 20px
+        border: 1px solid grey
+        border-radius: 50px
+
+    .file-picker
+        width: 490px
+        font-size: 36px
+        padding: 10px 0
+        display: inline-block
+        text-align: center
+        border: 1px solid grey
+        border-radius: 50px
+        cursor: pointer
+        transition: all 0.3s ease-in-out
+
+    .file-picker:hover
+        background-color: #fff
+        color: #5900CB
+        box-shadow: 3px 5px 6px rgba(0,0,0,0.3)
+
+    .file-picker + [type='file']
+        display: none
+    input:disabled
+        background: white
